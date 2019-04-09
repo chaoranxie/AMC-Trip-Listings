@@ -65,6 +65,13 @@ function formatListings($groupID, $xslPath, $xslParams = null) {
             die('Sorry, trip information is not available, because the AMC web site trips.outdoors.org could not be contacted. Please try again later. Error: '.htmlspecialchars($e->getMessage()));
         }  
         $xml->loadXML($data);
+        
+        $xpath = new DOMXPath($xml);
+        foreach ($xpath->evaluate("//trip[contains(trip_title, 'SHP')]") as $node) {
+          $node->parentNode->removeChild($node);
+        }
+        $xml->saveXml();
+        
     }
     timeMilestone('Loaded XML data');
     $result = $xsl->transformToXML($xml);
