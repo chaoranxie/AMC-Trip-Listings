@@ -119,7 +119,7 @@
                   <xsl:with-param name="rating" select="$rating"/>
                 </xsl:call-template>
               </xsl:variable>
-              <a href="{concat($listingsURL, '#trip', trip_id)}"><xsl:value-of
+              <a href="{concat($listingsURL, trip_id)}"><xsl:value-of
               select="$title"/><xsl:if test="$showInternalNav = 1"><span class="navOnly"> &#8595;</span></xsl:if></a>
               
               
@@ -159,14 +159,14 @@
           <td colspan="2">All Events by Date</td>
         </tr>
         <xsl:for-each select="*">
-          <xsl:sort select="trip_start_date"/>
+            <xsl:sort select="trip_start_date"/>
           <xsl:call-template name="trip-summary-row"/>
         </xsl:for-each>
       </xsl:if>
       
       <xsl:if test="1 = 1 or $byDate != 1">
         <!-- Muenchian method for grouping by activity_category -->
-        <xsl:for-each select="*[count(. | key('trips-by-category', activity_category)[1]) = 1]">
+        <xsl:for-each select="trip[count(. | key('trips-by-category', activity_category)[1]) = 1]">
           <xsl:sort select="activity_category"/>
           <tr class="section">
             <td colspan="2">
@@ -206,7 +206,6 @@
       <xsl:for-each select="*[count(. | key('trips-by-category', activity_category)[1]) = 1]">
         <xsl:sort select="activity_category"/>
         <h2><a name="{substring(activity_category, 1, 5)}"></a><xsl:value-of select="activity_category" /></h2>
-        <xsl:if test="activity_category = 'Hiking'"><xsl:call-template name="hike-rating-key"/></xsl:if>
         <xsl:for-each select="key('trips-by-category', activity_category)">
             <xsl:call-template name="joyst-trip"/>
             <!--xxsl:sort select="trip_start_date" /-->

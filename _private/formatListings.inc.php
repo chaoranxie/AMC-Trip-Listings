@@ -11,7 +11,9 @@ function formatListings($groupID, $xslPath, $xslParams = null) {
     $groupData = getAMCGroupData($groupID);
     timeMilestone('Retrieved raw XML listings from main site');
     $xsl = new XSLTProcessor();
-    $xsl->importStyleSheet(DOMDocument::load($xslPath));
+    $domDoc = new DOMDocument(); 
+    $domDoc->load($xslPath); 
+    $xsl->importStyleSheet($domDoc);
     /*if ($xslParams === null && isset($_SERVER['SERVER_NAME'])) {
         // we don't set listingsURL if we're running from cmd line/cron
         $listingsURL = 'http://'.$_SERVER['SERVER_NAME']
@@ -65,6 +67,15 @@ function formatListings($groupID, $xslPath, $xslParams = null) {
             die('Sorry, trip information is not available, because the AMC web site trips.outdoors.org could not be contacted. Please try again later. Error: '.htmlspecialchars($e->getMessage()));
         }  
         $xml->loadXML($data);
+        $xpath = new DOMXPath($xml);
+
+        // trip[not(contains(trip_title, 'SHP'))]
+
+        foreach ($xpath->evaluate("//trip[contains(trip_title, 'SHP')]") as $node) {
+          $node->parentNode->removeChild($node);
+        }
+        $xml->saveXml();
+        
     }
     timeMilestone('Loaded XML data');
     $result = $xsl->transformToXML($xml);

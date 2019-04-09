@@ -37,7 +37,8 @@ elseif ($groupID == 'worcesterym') {
     $contentType = 'text/html;charset=UTF-8';
 }
 elseif ($groupID == 'hbboston') {
-  $xslPath = "amc-trips-to-boston-hb-page.xsl";
+  #$xslPath = "amc-trips-to-boston-hb-page.xsl";
+  $xslPath = "amc-trips-to-html-page.xsl";
   $contentType = 'text/html;charset=UTF-8';  
 }
 elseif ($groupID == 'bostonintro') {

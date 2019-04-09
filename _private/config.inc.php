@@ -40,10 +40,10 @@ $kGroupData = array(
     'bostonym' => array(
         'title' => 'AMC Boston Young Members',
         'showHikeRatingKey' => 1,
-        'homePageUrl' =>  'http://amcboston.org/youngmembers/',
-        'listingsUrl' => 'http://amcboston.org/youngmembers/trip_list.shtml',
-        'rssUrl' => 'http://amcboston.org/youngmembers/trips.rss',
-        'icsUrl' => 'http://amcboston.org/youngmembers/trips.ics',
+        'homePageUrl' => 'https://ym.amcboston.org/',
+        'listingsUrl' => 'https://activities.outdoors.org/search/index.cfm/action/details/id/',
+        'rssUrl' => 'https://hb.amcboston.org/listings/?c=bostonym&output=rss',
+        'icsUrl' => 'https://hb.amcboston.org/listings/?c=bostonym&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2/committee/48',
         ),
         /*
@@ -83,10 +83,10 @@ $kGroupData = array(
     'hbboston' => array(
         'title' => 'AMC Boston H/B',
         'showHikeRatingKey' => 1,
-        'homePageUrl' => 'http://hbbostonamc.org/',
-        'listingsUrl' => 'http://ashearer.com/amc/listings/?c=hbboston',
-        'rssUrl' => 'http://ashearer.com/amc/listings/?c=hbboston&output=rss',
-        'icsUrl' => 'http://ashearer.com/amc/listings/?c=hbboston&output=ics',
+        'homePageUrl' => 'https://hb.amcboston.org/',
+        'listingsUrl' => 'https://activities.outdoors.org/search/index.cfm/action/details/id/',
+        'rssUrl' => 'https://hb.amcboston.org/listings/?c=hbboston&output=rss',
+        'icsUrl' => 'https://hb.amcboston.org/listings/?c=hbboston&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2/committee/60',
         ),
     // Can't find the comm. code for the next one.
@@ -105,7 +105,7 @@ $kGroupData = array(
 function getAMCGroupData($groupID) {
     global $kGroupData;
     if (!isset($kGroupData[$groupID])) {
-        $groupID = 'narragansett';
+        $groupID = 'boston';
     }
     return $kGroupData[$groupID];
 }
