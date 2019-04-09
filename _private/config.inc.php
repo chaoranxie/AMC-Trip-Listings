@@ -32,9 +32,9 @@ $kGroupData = array(
         'title' => 'AMC Boston',
         'showHikeRatingKey' => 1,
         'homePageUrl' => 'http://amcboston.org',
-        'listingsUrl' => 'http://ashearer.com/amc/listings/?c=boston',
-        'rssUrl' => 'http://ashearer.com/amc/listings/?c=boston&output=rss',
-        'icsUrl' => 'http://ashearer.com/amc/listings/?c=boston&output=ics',
+        'listingsUrl' => 'https://activities.outdoors.org/search/index.cfm/action/details/id/',
+        'rssUrl' => 'https://hb.amcboston.org/listings/?c=boston&output=rss',
+        'icsUrl' => 'https://hb.amcboston.org/listings/?c=boston&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2',
         ),
     'bostonym' => array(
