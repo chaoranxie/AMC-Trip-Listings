@@ -158,7 +158,7 @@
         <tr class="section">
           <td colspan="2">All Events by Date</td>
         </tr>
-        <xsl:for-each select="*">
+        <xsl:for-each select="trip[not(contains(trip_title, 'WHP'))]">
             <xsl:sort select="trip_start_date"/>
           <xsl:call-template name="trip-summary-row"/>
         </xsl:for-each>

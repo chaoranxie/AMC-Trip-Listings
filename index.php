@@ -1,7 +1,7 @@
 <?php
 //$xmlPath = "empty.xml";
 //$xmlPath = "Narrtrips-fix.xml";
-ini_set('display_errors', true);
+ini_set('display_errors', false);
 ini_set('error_reporting', E_ALL);
 require_once('_private/timer.inc.php');
 $version = 2.2;   // to make cache unique between versions
@@ -12,7 +12,7 @@ $cacheOptions = array(
     'lifeTime' => 300
 );
 //$cache = new Cache_Lite_Output($cacheOptions);
-$groupID = isset($_REQUEST['c']) ? $_REQUEST['c'] : '';
+$groupID = isset($_REQUEST['c']) ? $_REQUEST['c'] : 'hbboston';
 //include('_private/config.inc.php');
 
 $format = isset($_REQUEST['output']) ? $_REQUEST['output'] : '';
@@ -53,7 +53,7 @@ else {
 header('Content-Type: '.$contentType);
 //if (!empty($_REQUEST['nc']) || !$cache->start($format.$version.$groupID)) {
 
-if (empty($_REQUEST['nc'])) {
+if (false and empty($_REQUEST['nc'])) {
     $cache = new Cache_Lite($cacheOptions);
     $cacheID = $format.$version.$groupID;
     $cachedData = $cache->get($cacheID);
