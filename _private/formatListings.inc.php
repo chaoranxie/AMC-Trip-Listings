@@ -68,17 +68,11 @@ function formatListings($groupID, $xslPath, $xslParams = null) {
         }  
         $xml->loadXML($data);
         $xpath = new DOMXPath($xml);
-        foreach ($xpath->evaluate("//trip[contains(trip_title, 'WHP')]") as $node) {
+        foreach ($xpath->evaluate("//trip[contains(trip_title, 'WHP') or contains(trip_title, 'SHP') ]") as $node) {
           $node->parentNode->removeChild($node);
         }
         $xml->saveXml();
 
-        // trip[not(contains(trip_title, 'SHP'))]
-
-        foreach ($xpath->evaluate("//trip[contains(trip_title, 'SHP')]") as $node) {
-          $node->parentNode->removeChild($node);
-        }
-        $xml->saveXml();
         
     }
     timeMilestone('Loaded XML data');
