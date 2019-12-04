@@ -5,7 +5,7 @@ ini_set('display_errors', false);
 ini_set('error_reporting', E_ALL);
 require_once('_private/timer.inc.php');
 $version = 2.2;   // to make cache unique between versions
-require_once('Cache/Lite.php');
+// require_once('Cache/Lite.php');
 require_once('_private/formatListings.inc.php');
 $cacheOptions = array(
     'cacheDir' => '/tmp/',
