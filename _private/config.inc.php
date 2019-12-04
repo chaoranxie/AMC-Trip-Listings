@@ -1,32 +1,5 @@
 <?php
-/*if ($groupID == 'boston') {
-    $xmlPath = "http://trips.outdoors.org/index.cfm?method=ch.doxml&searchterms=&searchwhich=AND&whichsearch=byterms&tripchapter=Boston&tripregion=&tripstate=&tripdestination=&tripcommittee=&tripactivity=&tripstartmonth=7&tripstartday=1&tripstartyear=2010&tripstartmonthb=0&tripstartdayb=0&tripstartyearb=2015";
-    $groupTitle = 'AMC Boston';
-    $groupHomePageURL = 'http://amcboston.org/';
-}
-elseif ($groupID == 'bostonym') {
-    $xmlPath = "http://trips.outdoors.org/index.cfm?method=ch.doxml&searchterms=&searchwhich=AND&whichsearch=byterms&tripchapter=Boston&tripregion=&tripstate=&tripdestination=&tripcommittee=Young%20Members&tripactivity=&tripstartmonth=7&tripstartday=1&tripstartyear=2010&tripstartmonthb=0&tripstartdayb=0&tripstartyearb=2012";
-    $groupTitle = 'AMC Boston Young Members';
-    $groupHomePageURL = 'http://amcboston.org/youngmembers/';
-}
-elseif ($groupID == 'worcester') {
-    $xmlPath = "http://trips.outdoors.org/index.cfm?method=ch.doxml&searchterms=&searchwhich=AND&whichsearch=byterms&tripchapter=Worcester&tripregion=&tripstate=&tripdestination=&tripcommittee=&tripactivity=&tripstartmonth=7&tripstartday=1&tripstartyear=2010&tripstartmonthb=0&tripstartdayb=0&tripstartyearb=2015";
-    //$xmlPath = "http://trips.outdoors.org/xml/Narrtrips.xml";
-    $groupTitle = 'AMC Worcester';
-    $groupHomePageURL = 'http://amcworcester.org/';
-}
-elseif ($groupID == 'worcesterym') {
-    $xmlPath = "http://trips.outdoors.org/index.cfm?method=ch.doxml&searchterms=&searchwhich=AND&whichsearch=byterms&tripchapter=Worcester&tripregion=&tripstate=&tripdestination=&tripcommittee=Young%20Members&tripactivity=&tripstartmonth=7&tripstartday=1&tripstartyear=2010&tripstartmonthb=0&tripstartdayb=0&tripstartyearb=2015";
-    $groupTitle = 'AMC Worcester Young Members';
-    $groupHomePageURL = 'http://amcworcester.org/ym/';
-}
-else {
-    $xmlPath = "http://trips.outdoors.org/index.cfm?method=ch.doxml&searchterms=&searchwhich=AND&whichsearch=byterms&tripchapter=Narragansett&tripregion=&tripstate=&tripdestination=&tripcommittee=&tripactivity=&tripstartmonth=7&tripstartday=1&tripstartyear=2010&tripstartmonthb=0&tripstartdayb=0&tripstartyearb=2015";
-    $groupID = 'narragansett';
-    $groupTitle = 'AMC Narragansett';
-    $groupHomePageURL = 'http://amcnarragansett.org/';
-}
-*/
+
 $kGroupData = array(
     'boston' => array(
         'title' => 'AMC Boston',
@@ -46,13 +19,6 @@ $kGroupData = array(
         'icsUrl' => 'https://hb.amcboston.org/listings/?c=bostonym&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2/committee/48',
         ),
-        /*
-    'bostonymtemp' => array(
-        'title' => 'AMC Boston Young Members',
-        'homePageUrl' =>  'http://amcboston.org/youngmembers/',
-        'xmlUrl' => 'http://127.0.0.1:8008/amc/listings/bosttrips%20fix.xml',
-        ),
-        */
     'worcester' => array(
         'title' => 'AMC Worcester',
         'showHikeRatingKey' => 0,
@@ -89,7 +55,16 @@ $kGroupData = array(
         'icsUrl' => 'https://hb.amcboston.org/listings/?c=hbboston&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2/committee/60',
         ),
-    // Can't find the comm. code for the next one.
+    'bostonfamily' => array(
+        'title' => 'AMC Boston Family Outings',
+        'showHikeRatingKey' => 0,
+        'homePageUrl' => 'https://family.amcboston.org/',
+        'listingsUrl' => 'https://activities.outdoors.org/search/index.cfm/action/details/id/',
+        'rssUrl' => 'https://family.amcboston.org/listings/?c=hbboston&output=rss',
+        'icsUrl' => 'https://family.amcboston.org/listings/?c=hbboston&output=ics',
+        'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2/committee/16',
+        ),
+        // Can't find the comm. code for the next one.
     'bostonintro' => array(
         'title' => 'AMC Boston Intro',
         'showHikeRatingKey' => 0,
