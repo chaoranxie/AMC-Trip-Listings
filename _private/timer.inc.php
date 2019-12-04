@@ -1,5 +1,5 @@
 <?php
-class timer {
+class GlobalTimer {
 	var $startTimeFracSec, $startTimeSec;
 	
 	function timer() {
@@ -13,7 +13,7 @@ class timer {
 }
 
 global $globalTimer;  // in case the include statement that loaded this file was inside a function
-$globalTimer = new timer();
+$globalTimer = new GlobalTimer();
 
 function timeMilestone($operation) {
     global $showTimer;
