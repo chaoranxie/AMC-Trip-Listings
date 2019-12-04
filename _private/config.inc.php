@@ -22,6 +22,7 @@ $kGroupData = array(
     'bostonhb' => array(
         'title' => 'AMC Boston H/B',
         'showHikeRatingKey' => 0,
+        'showAllEventsByDate' => 0,
         'homePageUrl' => 'https://hb.amcboston.org/',
         'listingsUrl' => 'https://activities.outdoors.org/search/index.cfm/action/details/id/',
         'rssUrl' => 'https://hb.amcboston.org/listings/?c=bostonhb&output=rss',

@@ -26,6 +26,8 @@
   <xsl:param name="updateHorizonDays" select="14"/>
   <xsl:param name="cancelHorizonDays" select="7"/>
   <xsl:param name="showHikeRatingKey" select="1"/>
+  <xsl:param name="showAllEventsByDate" select="1"/>
+
   
   <!-- Compute numeric updateHorizon and cancelHorizon in YYYYMMDD format
   based on updateHorizonDays, cancelHorizonDays, and the current date.
@@ -154,7 +156,7 @@
     <xsl:param name="showInternalNav" select="1"/>
     <h2><a name="contents"></a>At a Glance</h2>
     <table class="contents" border="0" cellpadding="0" cellspacing="0">
-      <xsl:if test="$groupID != 'bostonhb' or $byDate = 1">
+      <xsl:if test="$showAllEventsByDate = 1 or $byDate = 1">
         <tr class="section">
           <td colspan="2">All Events by Date</td>
         </tr>
