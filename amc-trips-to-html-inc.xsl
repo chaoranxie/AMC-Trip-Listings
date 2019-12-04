@@ -154,7 +154,7 @@
     <xsl:param name="showInternalNav" select="1"/>
     <h2><a name="contents"></a>At a Glance</h2>
     <table class="contents" border="0" cellpadding="0" cellspacing="0">
-      <xsl:if test="1 = 1 or $byDate = 1">
+      <xsl:if test="$groupID != 'bostonhb' or $byDate = 1">
         <tr class="section">
           <td colspan="2">All Events by Date</td>
         </tr>
