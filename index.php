@@ -12,7 +12,7 @@ $cacheOptions = array(
     'lifeTime' => 300
 );
 //$cache = new Cache_Lite_Output($cacheOptions);
-$groupID = isset($_REQUEST['c']) ? $_REQUEST['c'] : 'hbboston';
+$groupID = isset($_REQUEST['c']) ? $_REQUEST['c'] : 'bostonhb';
 //include('_private/config.inc.php');
 
 $format = isset($_REQUEST['output']) ? $_REQUEST['output'] : '';
@@ -36,8 +36,7 @@ elseif ($groupID == 'worcesterym') {
     $xslPath = "amc-trips-to-worcester-page.xsl";
     $contentType = 'text/html;charset=UTF-8';
 }
-elseif ($groupID == 'hbboston') {
-  #$xslPath = "amc-trips-to-boston-hb-page.xsl";
+elseif ($groupID == 'bostonhb') {
   $xslPath = "amc-trips-to-html-page.xsl";
   $contentType = 'text/html;charset=UTF-8';  
 }

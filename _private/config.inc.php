@@ -46,13 +46,13 @@ $kGroupData = array(
         'icsUrl' => 'http://ashearer.com/amc/listings/?c=narragansett&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/7',
         ),
-    'hbboston' => array(
+    'bostonhb' => array(
         'title' => 'AMC Boston H/B',
-        'showHikeRatingKey' => 1,
+        'showHikeRatingKey' => 0,
         'homePageUrl' => 'https://hb.amcboston.org/',
         'listingsUrl' => 'https://activities.outdoors.org/search/index.cfm/action/details/id/',
-        'rssUrl' => 'https://hb.amcboston.org/listings/?c=hbboston&output=rss',
-        'icsUrl' => 'https://hb.amcboston.org/listings/?c=hbboston&output=ics',
+        'rssUrl' => 'https://hb.amcboston.org/listings/?c=bostonhb&output=rss',
+        'icsUrl' => 'https://hb.amcboston.org/listings/?c=bostonhb&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2/committee/60',
         ),
     'bostonfamily' => array(
@@ -60,8 +60,8 @@ $kGroupData = array(
         'showHikeRatingKey' => 0,
         'homePageUrl' => 'https://family.amcboston.org/',
         'listingsUrl' => 'https://activities.outdoors.org/search/index.cfm/action/details/id/',
-        'rssUrl' => 'https://family.amcboston.org/listings/?c=hbboston&output=rss',
-        'icsUrl' => 'https://family.amcboston.org/listings/?c=hbboston&output=ics',
+        'rssUrl' => 'https://hb.amcboston.org/listings/?c=bostonfamily&output=rss',
+        'icsUrl' => 'https://hb.amcboston.org/listings/?c=bostonfamily&output=ics',
         'xmlUrl' => 'http://activities.outdoors.org/xml/index.cfm/chapter/2/committee/16',
         ),
         // Can't find the comm. code for the next one.
